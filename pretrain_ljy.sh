@@ -18,7 +18,7 @@ do
   python3 create_pretraining_data.py  \
     --input_file=gs://clue_storage/corpus2020/clue_pretrain_train_000$l.zip   \
     --output_file=gs://clue_storage/clue_pretrain_corpus/tfrecords/bert_base_128_c5_vocab8k/clue_pretrain128_$i.tfrecord \
-    --vocab_file=./bert_base_dir/chinese_L-12_H-768_A-12/vocab_clue.txt  \
+    --vocab_file=./RoBERTa-tiny-clue/vocab.txt  \
     --t2s=True  \
     --do_lower_case=True \
     --max_seq_length=128 \
