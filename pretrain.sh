@@ -8,7 +8,7 @@
 # --vocab_file=./RoBERTa-tiny-clue/vocab.txt  \
 
 
-INPUT_DIR=gs://clue_storage/clue_pretrain_corpus/tfrecords/bert_base_128_c5_vocab8k/
+INPUT_DIR=gs://clue_storage/clue_pretrain_corpus/tfrecords/bert_base_128_c5_vocab8k/clue_pretrain128_0.tfrecord
 OUT_PUT_DIR=gs://clue_storage/clue_pretrain_corpus/pretraining_output
 TPU_IP=10.240.1.2
 
