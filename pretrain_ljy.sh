@@ -4,8 +4,8 @@
 echo $1,$2
 PWD=$(cd -P -- "$(dirname -- "$0")" && pwd -P)
 j=0
-if [ ! -d $PWD/log ];then
-  mkdir $PWD/log
+if [ ! -d $PWD/log_c5_vocab8k ];then
+  mkdir $PWD/log_c5_vocab8k
 fi
 
 
@@ -18,7 +18,7 @@ do
   python3 create_pretraining_data.py  \
     --input_file=gs://clue_storage/clue_pretrain_corpus/raw_txt_corpus/train/clue_pretrain_$l.txt   \
     --output_file=gs://clue_storage/clue_pretrain_corpus/tfrecords/bert_base_128_c5_vocab8k/clue_pretrain128_$i.tfrecord \
-    --vocab_file=./RoBERTa-tiny-clue/vocab.txt  \
+    --vocab_file=./bert_base/vocab_clue.txt  \
     --t2s=True  \
     --do_lower_case=True \
     --max_seq_length=128 \
