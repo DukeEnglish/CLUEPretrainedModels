@@ -8,7 +8,7 @@
 # --vocab_file=./RoBERTa-tiny-clue/vocab.txt  \
 
 
-INPUT_DIR=gs://clue_storage/clue_pretrain_corpus/tfrecords/bert_base_128_c5_vocab8k/clue_pretrain128_0.tfrecord
+INPUT_DIR=gs://clue_storage/clue_pretrain_corpus/tfrecords/bert_base_128_c5_vocab8k/clue_pretrain128_201.tfrecord
 OUT_PUT_DIR=gs://clue_storage/clue_pretrain_corpus/pretraining_output
 TPU_IP=10.240.1.2
 # bert_base/vocab_clue.txt
@@ -19,7 +19,6 @@ python3 run_pretraining.py \
   --do_train=True \
   --do_eval=True \
   --bert_config_file=./bert_base/bert_config.json \
-  --init_checkpoint=./bert_base/bert_model.ckpt \
   --train_batch_size=32 \
   --max_seq_length=128 \
   --max_predictions_per_seq=20 \
